@@ -7,7 +7,7 @@
 
 **Для старта с нуля:**
 
-Установить Docker (и docker-compose)
+Установить [Docker](https://docs.docker.com/engine/install/ubuntu/) (и docker-compose)
 
 Затем зайти в корневую паку YaMDB и создать файл .env содержания:
 
