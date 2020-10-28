@@ -9,21 +9,21 @@
 
 Установить [Docker](https://docs.docker.com/engine/install/ubuntu/) (и docker-compose)
 
-Затем зайти в корневую паку YaMDB и создать файл .env содержания:
+Затем зайти в корневую паку YaMDB и создать файл .env следующего содержания:
 
-DB_ENGINE=django.db.backends.postgresql
+>DB_ENGINE=django.db.backends.postgresql
 
-DB_NAME=yamdb_user
+>DB_NAME=yamdb_user
 
-POSTGRES_USER=yamdb_user
+>POSTGRES_USER=yamdb_user
 
-POSTGRES_PASSWORD=###password###
+>POSTGRES_PASSWORD=###password###
 
-DB_HOST=db
+>DB_HOST=db
 
-DB_PORT=5432
+>DB_PORT=5432
 
-SECRET_KEY='######'
+>SECRET_KEY='######'
 
 Затем там же в паке выполнить `docker-compose up`
 
@@ -36,5 +36,6 @@ SECRET_KEY='######'
 - `python3 manage.py loaddata fixtures.json` - (по желанию, заполняет тестовыми данными базу данных)
 
 Сервис будет доступен по адресу 127.0.0.1:8000
-Админка 127.0.0.1:8000
+
+Админка 127.0.0.1:8000/admin
 
