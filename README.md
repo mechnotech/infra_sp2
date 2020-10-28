@@ -13,9 +13,9 @@
 
 >DB_ENGINE=django.db.backends.postgresql
 >
->DB_NAME=yamdb_user
+>DB_NAME=yamdb
 >
->POSTGRES_USER=yamdb_user
+>POSTGRES_USER=yamdb
 >
 >POSTGRES_PASSWORD=###password###
 >
