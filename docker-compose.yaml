@@ -1,0 +1,24 @@
+# версия docker-compose
+version: '2'
+
+# имя директории для хранения данных
+volumes:
+  postgres_data:
+
+services:
+  db:
+    image: postgres:13.0
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+  web:
+    build: .
+    restart: always
+    command: gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - ./.env
