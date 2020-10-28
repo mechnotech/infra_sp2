@@ -1,11 +1,14 @@
 ###### YaMDB Учебный проект Яндекс Практикум
 
 **Описание проекта:**
-
-Django REST API
+Учебная версия API
+использует Django REST API
+базу данных Postgresql
 
 **Для старта с нуля:**
+
 Для начала нужно поставить Docker
+
 Затем зайти в корневую паку YaMDB и создать файл .env содержания:
 
 DB_ENGINE=django.db.backends.postgresql
