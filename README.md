@@ -3,7 +3,7 @@
 **Описание проекта:**
 Учебная версия API
 использует Django REST API
-базу данных Postgresql
+и базу данных Postgresql
 
 **Для старта с нуля:**
 
@@ -12,17 +12,17 @@
 Затем зайти в корневую паку YaMDB и создать файл .env следующего содержания:
 
 >DB_ENGINE=django.db.backends.postgresql
-
+>
 >DB_NAME=yamdb_user
-
+>
 >POSTGRES_USER=yamdb_user
-
+>
 >POSTGRES_PASSWORD=###password###
-
+>
 >DB_HOST=db
-
+>
 >DB_PORT=5432
-
+>
 >SECRET_KEY='######'
 
 Затем там же в паке выполнить `docker-compose up`
