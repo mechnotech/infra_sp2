@@ -2,7 +2,7 @@
 
 **Описание проекта:**
 
-Проект YaMDb собирает отзывы (Review) пользователей на произведения (Title)
+Проект YaMDb это API для сервиса отзывывов о фильмах и произведениях. 
 
 Использует Django REST Framework и базу данных Postgresql
 
@@ -54,30 +54,24 @@
 При удалении объекта отзыва **Review** должны быть удалены все комментарии к этому отзыву.
 
 
-**Для старта с нуля:**
+### Для старта с нуля:
 
-Установить [Docker](https://docs.docker.com/engine/install/ubuntu/) (и docker-compose)
+Установить [Git](https://github.com/git-guides/install-git)
 
-Затем зайти в корневую паку YaMDB и создать файл .env следующего содержания:
+Установить [Docker](https://docs.docker.com/engine/install/) и [docker-compose](https://docs.docker.com/compose/install/#install-compose)
 
->DB_ENGINE=django.db.backends.postgresql
->
->DB_NAME=yamdb
->
->POSTGRES_USER=yamdb
->
->POSTGRES_PASSWORD=###password###
->
->DB_HOST=db
->
->DB_PORT=5432
->
->SECRET_KEY='######'
+Склонировать репозитарий `git clone https://github.com/mechnotech/infra_sp2 && cd infra_sp2`
+
+Cоздать файл .env c собсвенными настройками и паролями  по аналогии с .env.example:
 
 Затем там же в паке выполнить `docker-compose up`
 
-Найти контейнер web (скорее всего будет называться apiyamdb_web_1) `docker container ls` 
-Зайти в контейнер `docker exec -it apiyamdb_web_1 bash`
+Это создаст и запустит два контейнера **db** (Postgresql) и **web** (Django)
+
+Необходимо зайти в контейнер web: 
+
+Открыть новое окно терминала Alt + Ctrl + T в корневой папке проект и выполнить `docker-compose run web bash`
+
 и внутри него выполнить:
 
 - `python3 manage.py migrate`
@@ -88,3 +82,6 @@
 
 Админка 127.0.0.1:8000/admin
 
+Над проектом работали: Евгений Шумилов, Александр Иванов, Дмитрий Морозов
+
+Для контактов: vk.com/mech2045 
