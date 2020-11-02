@@ -1,5 +1,5 @@
 # версия docker-compose
-version: '2'
+version: '3.7'
 
 # имя директории для хранения данных
 volumes:
